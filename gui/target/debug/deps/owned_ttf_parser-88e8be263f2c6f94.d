@@ -1,0 +1,10 @@
+/Users/peterweyand/Code/rustprojects/project1_2/gui/target/debug/deps/owned_ttf_parser-88e8be263f2c6f94.rmeta: /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/lib.rs /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/convert.rs /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/owned.rs /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/preparse.rs
+
+/Users/peterweyand/Code/rustprojects/project1_2/gui/target/debug/deps/libowned_ttf_parser-88e8be263f2c6f94.rlib: /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/lib.rs /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/convert.rs /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/owned.rs /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/preparse.rs
+
+/Users/peterweyand/Code/rustprojects/project1_2/gui/target/debug/deps/owned_ttf_parser-88e8be263f2c6f94.d: /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/lib.rs /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/convert.rs /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/owned.rs /Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/preparse.rs
+
+/Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/lib.rs:
+/Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/convert.rs:
+/Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/owned.rs:
+/Users/peterweyand/.cargo/registry/src/github.com-1ecc6299db9ec823/owned_ttf_parser-0.17.1/src/preparse.rs:
