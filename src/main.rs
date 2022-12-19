@@ -4,28 +4,32 @@ use std::env;
 use serde::*;
 use std::{thread, time};
 
+// type Data = (String, String);
+type Data = Vec<(String, String)>;
+
 fn main() {
     println!("Inside process_handler");
-    let (server0, server_name0) = IpcOneShotServer::<Vec<(String, String)>>::new().unwrap();
+    let (server0, server_name0) = IpcOneShotServer::<IpcSender<Data>>::new().unwrap();
     println!("server_name0 in process_handler: {:?}", server_name0);
     let guiserver = spawn_server(
-        "/Users/peterweyand/Code/rustprojects/project1_2/src/rungui.sh".to_string(), 
+        "/Users/peterweyand/Code/rustprojects/project1_2/src/rungui.sh".to_string(),
         &server_name0
     );
-    let (receiver, sendervec): (IpcReceiver<Vec<(String,String)>>, Vec<_>) = server0.accept().unwrap();
+    let (_receiver, sender): (IpcReceiver<IpcSender<Data>>, IpcSender<Data>) = server0.accept().unwrap();
+
+    let data = vec![("Peter".to_string(), "36".to_string())];
+    println!("value of _receiver {:?}", _receiver);
+    sender.send(data);
+
     loop {
-        match receiver.try_recv() {
+        match _receiver.try_recv() {
             Ok(res) => {
-                // Do something interesting with your result
-                std::thread::sleep_ms(1000);
-                println!("Received data...{:?}", res);
-                //I don't know what type signature res is supposed to have, but it should receive the datavec. Then I can update that in main and in gui I can access via r1
+                println!("Received data in main...{:?}", res);
                 break;
             },
             Err(_) => {
-                // Do something else useful while we wait
+                println!("Still waiting in main...");
                 std::thread::sleep_ms(1000);
-                println!("Still waiting...");
             }
         }
     }
