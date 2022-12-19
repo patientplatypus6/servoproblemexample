@@ -8,11 +8,14 @@ use std::{thread, time};
 
 
 fn main() {
-    println!("Hello, world!");
+    println!("Inside GUI process");
+    let datavec = vec![("Peter".to_string(), "36".to_string())];
     let args: Vec<String> = env::args().collect();
-    println!("value of args {:?}", args);
-
-    let mut s = args[1].clone();
-    println!("&cloned_string: {:?}", args[1].clone());
-    let tx2 = IpcSender::<Vec<(String, String)>>::connect(args[1].clone()).unwrap();
+    let (s1, r1): (IpcSender<Vec<(String, String)>>, IpcReceiver<Vec<(String, String)>>) = ipc::channel().unwrap();
+    s1.send(datavec).unwrap();
+    let s0 = IpcSender::connect(args[1].clone()).unwrap();
+    s0.send(s1).unwrap();
+    loop {
+        std::thread::sleep_ms(1000);
+    }
 }
